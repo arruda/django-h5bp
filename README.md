@@ -49,7 +49,7 @@ H5BP Template Blocks
 
 Here are all the blocks that exist in the h5bp.html:
 
-### <head\>
+### \<head\>
 * page-title
 * meta-description
 * meta-keywords
@@ -58,23 +58,23 @@ Here are all the blocks that exist in the h5bp.html:
 * meta-extras
 * css-extras
 
-### <body\><header\>
+### \<body\>\<header\>
 * header
 
-### <body\><div class="main"\>
+### \<body\>\<div class="main"\>
 * main-container
 
-### <body\>
+### \<body\>
 * js-imports
 
-### <body\><script type="text/javascript"\>
+### \<body\>\<script type="text/javascript"\>
 * jquery-docready
 * jquery-winload
 
-### <body\><script type="text/javascript"\>
+### \<body\>\<script type="text/javascript"\>
 * js-onpage
 
-### <body\>
+### \<body\>
 * analytics
 
 404 Page
