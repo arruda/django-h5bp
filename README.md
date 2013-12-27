@@ -5,6 +5,12 @@ A simple HTML5 Boilerplate Django app that has some predefined template Blocks,
 useful to be extended in any application template.
 
 
+Instalation
+-----------------------------------
+
+    pip install django-h5bp
+
+
 Usage
 -----------------------------------
 
