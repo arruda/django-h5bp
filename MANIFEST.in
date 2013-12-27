@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include django_h5bp/static *
+recursive-include django_h5bp/templates *
