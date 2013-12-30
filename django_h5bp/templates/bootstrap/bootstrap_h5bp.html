@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block page-title %}{% endblock %}</title>
+
+
+        <meta name="description" content="{% block meta-description %}{% endblock %}">
+        <meta name="keywords" content="{% block meta-keywords %}{% endblock %}" >
+
+        <meta name="author" content="{% block meta-author %}{% endblock %}">
+        <meta name="Generator" content="{% block meta-generator %}{% endblock %}" >
+
+        <meta name="viewport" content="width=device-width">
+
+        {% block meta-extras %}{% endblock %}
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+        <link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico">
+        <link rel="apple-touch-icon" href="{{ STATIC_URL }}apple-touch-icon.png">
+
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap/main.css">
+
+        {% block css-extras %}{% endblock %}
+        <script src="{{ STATIC_URL }}js/bootstrap/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+
+        {% block navbar-container %}
+        <div class="navbar-header">
+            {% block navbar-header %}
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            {% endblock %}
+
+          {% block navbar-brand %}<a class="navbar-brand" href="#">Project name</a>{% endblock %}
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            {% block navbar-nav %}
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            {% endblock %}
+          </ul>
+          <form class="navbar-form navbar-right">
+
+            {% block navbar-right %}
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+            {% endblock %}
+          </form>
+        </div><!--/.navbar-collapse -->
+        {% endblock %}
+
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        {% block main-jumbotron %}
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        {% endblock %}
+      </div>
+    </div>
+
+    <div class="container">
+        {% block main-container %}
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div>
+         {% endblock %}
+      </div>
+
+      {% block main-container-footer-hr %}
+      <hr>
+      {% endblock %}
+
+      <footer>
+        {% block footer %}
+        <p>&copy; Company 2013</p>
+        {% endblock %}
+      </footer>
+    </div> <!-- /container -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/bootstrap/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="{{ STATIC_URL }}js/bootstrap/vendor/bootstrap.min.js"></script>
+
+        {% block js-imports %}
+            <script src="{{ STATIC_URL }}js/main.js"></script>
+        {% endblock %}
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                {% block jquery-docready %}{% endblock %}
+            });
+            $(window).load(function() {
+                {% block jquery-winload %}{% endblock %}
+            });
+        </script>
+        <script type="text/javascript">
+            {% block js-onpage %}{% endblock %}
+        </script>
+
+        {% block analytics %}
+            <script>
+                var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src='//www.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+        {% endblock %}
+    </body>
+</html>

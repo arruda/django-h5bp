@@ -23,7 +23,7 @@ Add this app to the 'installed_apps' settings:
 
 Extend the H5BP template in your base template, here is an example:
 
-    {% extends "h5bp.html" %}
+    {% extends "responsive/responsive_h5bp.html" %}
 
     {% block page-title %}My Great Project{% endblock %}
 
@@ -41,7 +41,7 @@ Extend the H5BP template in your base template, here is an example:
         <p>Footer</p>
     {% endblock %}
 
-That should be enought to have your base.html using the HTML5 Boilerplate django template.
+That should be enought to have your base.html using the Responsive HTML5 Boilerplate Django template.
 
 Static Files
 -----------------------------------
@@ -53,7 +53,7 @@ The only one missing is the favicon.ico, that you should set your own (else it w
 H5BP Template Blocks
 -----------------------------------
 
-Here are all the blocks that exist in the h5bp.html:
+Here are all the blocks that exist in the responsive_h5bp.html:
 
 ### \<head\>
 * page-title
