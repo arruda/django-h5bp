@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block page-title %}{% endblock %}</title>
+
+        <meta name="description" content="{% block meta-description %}{% endblock %}">
+        <meta name="keywords" content="{% block meta-keywords %}{% endblock %}" >
+
+        <meta name="author" content="{% block meta-author %}{% endblock %}">
+        <meta name="Generator" content="{% block meta-generator %}{% endblock %}" >
+
+        <meta name="viewport" content="width=device-width">
+        {% block meta-extras %}{% endblock %}
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+        <link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico">
+        <link rel="apple-touch-icon" href="{{ STATIC_URL }}apple-touch-icon.png">
+
+
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/classic/normalize.min.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/classic/main.css">
+
+        {% block css-extras %}{% endblock %}
+        <script src="{{ STATIC_URL }}js/classic/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        {% block body-content %}
+            <p>Hello world! This is HTML5 Boilerplate.</p>
+        {% endblock %}
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/classic/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+
+        {% block js-imports %}
+        <script src="{{ STATIC_URL }}js/plugins.js"></script>
+        <script src="{{ STATIC_URL }}js/main.js"></script>
+        {% endblock %}
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                {% block jquery-docready %}{% endblock %}
+            });
+            $(window).load(function() {
+                {% block jquery-winload %}{% endblock %}
+            });
+        </script>
+        <script type="text/javascript">
+            {% block js-onpage %}{% endblock %}
+        </script>
+
+        {% block analytics %}
+            <script>
+                var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src='//www.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+        {% endblock %}
+    </body>
+</html>
