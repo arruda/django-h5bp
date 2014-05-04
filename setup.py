@@ -17,6 +17,7 @@ setup(
     url='https://github.com/arruda/django-h5bp',
     author='Felipe Arruda Pontes',
     author_email='contato@arruda.blog.br',
+    install_requires=['Django >= 1.6', ],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',

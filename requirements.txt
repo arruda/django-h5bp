@@ -1,0 +1,6 @@
+#it self
+-e .
+
+#test
+
+coverage
