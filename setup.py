@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='django-h5bp',
     version='0.3.3',
-    packages=['django_h5bp'],
+    packages=['django_h5bp', ],
     include_package_data=True,
     license='MIT License',
     description='A simple HTML5 Boilerplate Django app that has some predefined template Blocks, useful to be extended in any application template.',
